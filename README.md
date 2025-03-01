@@ -1,5 +1,5 @@
 Feedback Clipboard
-A simple tool for managing and copying custom text snippets with a click.
+-A simple tool for managing and copying custom text snippets with a click.
 
 Features
 Custom Buttons: Create buttons with display names and content (text, emojis, etc.).
