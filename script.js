@@ -13,14 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameInput = document.getElementById('name');
     const contentInput = document.getElementById('content');
 
-    // Define default buttons
     const defaultButtons = [
         { name: '🟩', content: '🟩' },
         { name: '🟥', content: '🟥' },
         { name: 'Copy Me', content: 'I hope you like the tool! Have fun! ❤️' }
     ];
 
-    // Load buttons from local storage or use defaults if none exist
     let buttons = JSON.parse(localStorage.getItem('buttons')) || defaultButtons;
     let editingIndex = null;
 
@@ -134,11 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     helpButton.addEventListener('click', () => {
-        alert('This tool allows you to create buttons that copy predefined text to your clipboard.\n\n' +
+        alert('This tool allows you to create buttons to copy predefined text to your clipboard.\n\n' +
               'Features:\n' +
               '- Click "Add Button" to create a new button.\n' +
               '- Click on any button to copy its content.\n' +
               '- Toggle "Edit Mode" to edit, delete, or drag-and-drop buttons to reorder them.\n' +
+              '- When "Edit Mode" is toggled on, you can also see Export and Import buttons.\n' +
               '- Use "Export" to save your buttons as a JSON file.\n' +
               '- Use "Import" to load buttons from a JSON file.\n' +
               '- Use the theme toggle to switch between light and dark modes.\n\n' +
