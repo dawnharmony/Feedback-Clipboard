@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Clipboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left"></div>
+        <div class="header-center">
+            <h1>Feedback Clipboard</h1>
+            <img src="pepe-notes.png" alt="Pepe Notes" class="header-icon">
+        </div>
+        <div class="header-right">
+            <label class="theme-toggle">
+                <input type="checkbox" id="theme-toggle-checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+    <main>
+        <div id="button-container"></div>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <button id="export-button" class="edit-mode-only">Export</button>
+            <button id="import-button" class="edit-mode-only">Import</button>
+            <input type="file" id="import-file" style="display: none;" accept=".json">
+        </div>
+        <div class="footer-right">
+            <button id="add-button">Add Button</button>
+            <button id="edit-mode-toggle">Edit Mode: OFF</button>
+            <button id="help-button">?</button>
+        </div>
+    </footer>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <form id="button-form">
+                <div class="form-group">
+                    <label for="name">Button Display Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">Content:</label>
+                    <textarea id="content" rows="5" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Save</button>
+                    <button type="button" id="cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
